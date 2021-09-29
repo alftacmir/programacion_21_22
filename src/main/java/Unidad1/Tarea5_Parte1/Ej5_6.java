@@ -1,10 +1,11 @@
-package Unidad1.Tarea5;
+package Unidad1.Tarea5_Parte1;
 
 import java.util.Scanner;
 
 public class Ej5_6 {
     public static void main(String[] args) {
-        float gravedad = 9.8f, tiempo = 0;
+         final float gravedad = 9.8f;
+        float tiempo = 0;
         while (tiempo <= 0) {
 
             Scanner teclado = new Scanner(System.in);
