@@ -1,7 +1,7 @@
 package Unidad1.Tarea5_Parte2;
 
 import java.util.Scanner;
-
+//
 public class Ej5_12 {
   public static void main(String[] args) {
     int num1, num2, num3;

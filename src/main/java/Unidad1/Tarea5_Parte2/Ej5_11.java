@@ -1,7 +1,7 @@
 package Unidad1.Tarea5_Parte2;
 
 import java.util.Scanner;
-
+//
 public class Ej5_11 {
   public static void main(String[] args) {
     int nota = 0, pregunta = 1, siono;

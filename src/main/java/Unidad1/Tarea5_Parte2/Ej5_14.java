@@ -1,5 +1,5 @@
 package Unidad1.Tarea5_Parte2;
-
+//
 public class Ej5_14 {
   public static void main(String[] args) {
     // Escribe un programa que pinte una pirámide rellena con un carácter introducido por teclado
