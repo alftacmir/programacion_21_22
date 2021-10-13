@@ -14,12 +14,12 @@ public class Ej_14 {
     Scanner teclado=new Scanner(System.in);
     System.out.println("Introduzca un numero para dibujar el triangulo");
     int n=teclado.nextInt();
-    int fila,columnas=n;
-    for (fila=1;fila<columnas;fila++){
-      System.out.printf("\n*");
-      for (columnas=1;columnas<=n;columnas++){
-        System.out.printf("*");
+    int fila,columnas;
+    for (fila=0;fila<n;fila++){
+      for (columnas=0;columnas<n-fila;columnas++){
+        System.out.print("*");
       }
+      System.out.println();
     }
   }
 }
