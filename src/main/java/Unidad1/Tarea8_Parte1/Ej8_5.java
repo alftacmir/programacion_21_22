@@ -2,7 +2,7 @@ package Unidad1.Tarea8_Parte1;
 
 import java.util.Scanner;
 
-public class Ej_5 {
+public class Ej8_5 {
   public static void main(String[] args) {
     //Desarrollar un programa que solicite los valores mínimo y máximo de un rango.
     // A continuación, solicitará por teclado un valor que debe estar dentro del rango.
@@ -13,6 +13,12 @@ public class Ej_5 {
     int min=teclado.nextInt();
     System.out.println("Introduce el rango máximo");
     int max=teclado.nextInt();
+    System.out.println("Introduce un numero que este dentro del rango metido");
+    int num=teclado.nextInt();
+    while (num<min || num>max){
+      System.out.println("Vuelve a introducir el numero");
+      num=teclado.nextInt();
+    }
 
   }
 }

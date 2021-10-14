@@ -12,13 +12,14 @@ public class Ej8_5 {
     System.out.println("Introduzca la altura de la piramide");
     int altura=teclado.nextInt();
 
-    for (int i = 0; i < altura; i++) {
-        for (int j =0 ; j<=i; j++) {
+    for (int i = 0; i <=altura; i++) {
+      for (int j = 0; j <=altura-1-i ;j++) {
+        System.out.print(" ");
+      }
+        for (int j =0 ; j< (i * 2)-1; j++) {
             System.out.print(caracter);
         }
-      for (int j = 0; j <= i; j++) {
-        System.out.print(caracter);
-      }
+
 
       System.out.println();
     }
