@@ -14,8 +14,8 @@ public class Debug_rombo {
         } else {
           System.out.print(" ");
         }
-        System.out.println();
       }
+      System.out.println();
     }
   }
 }
