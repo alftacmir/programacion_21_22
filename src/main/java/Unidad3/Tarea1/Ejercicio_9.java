@@ -2,15 +2,17 @@ package Unidad3.Tarea1;
 
 import java.util.Scanner;
 
-public class Ejercicio_8 {
+public class Ejercicio_9 {
   public static void main(String[] args) {
-    // Escribir una función a la que se le pase un número entero y devuelva el número de divisores
-    // primos que tiene.
+    // Implementar la función divisoresPrimos() que muestra, por consola, todos los divisores primos
+    // del número que se le pasa como parámetro
     Scanner teclado = new Scanner(System.in);
     System.out.println("Introduce un numero para calcular si es primo");
     int numero = teclado.nextInt();
 
     System.out.println("El numero de divisores primos es " + numdivprimo(numero));
+    System.out.print("Los numeros que son divisores primos son: ");
+    divisoresprimos(numero);
   }
 
   static boolean esprimo(int a) {
@@ -32,5 +34,13 @@ public class Ejercicio_8 {
       }
     }
     return contador;
+  }
+
+  static void divisoresprimos(int a) {
+    for (int i = 2; i < a; i++) {
+      if (esprimo(i) && a % i == 0) {
+        System.out.print(i + " ");
+      }
+    }
   }
 }
