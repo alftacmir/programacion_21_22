@@ -16,7 +16,7 @@ public class Ejercicio6 {
   }
 
   static int[] sinrepetidos(int[] t) {
-    int[] e = new int[1];
+    int[] e = new int[0];
     int contador = 0;
     boolean serepite;
     for (int i = 0; i < t.length; i++) {
@@ -24,12 +24,13 @@ public class Ejercicio6 {
       for (int j = 0; j < e.length; j++) {
         if (t[i] == e[j]) {
           serepite = true;
+          break;
         }
-        if (!serepite) {
-          e = Arrays.copyOf(e, e.length + 1);
-          e[contador] = t[i];
-          contador++;
-        }
+      }
+      if (!serepite) {
+        e = Arrays.copyOf(e, e.length + 1);
+        e[contador] = t[i];
+        contador++;
       }
     }
     return e;
