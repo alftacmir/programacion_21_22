@@ -1,5 +1,6 @@
 package Unidad3.Tarea3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -17,12 +18,36 @@ public class Ejercicio4 {
     } while (longclave < 1 || longclave > 5);
     int[] clave = new int[longclave];
     int[] combination = new int[longclave];
-    System.out.println("Introduce una combinación");
     for (int i = 0; i < combination.length; i++) {
-      clave[i] = (int) (Math.random() * 10);
+      clave[i] = (int) (Math.random() * 9) + 1;
     }
-    int combi = teclado.nextInt();
 
-    int cociente = combi;
+    System.out.println(Arrays.toString(clave));
+    do {
+      int cociente;
+      do {
+        System.out.println("Introduce una combinación");
+        cociente = teclado.nextInt();
+
+      } while (cociente > Math.pow(10, longclave) - 1);
+      int ninvertido = 0;
+      int resto;
+      while (cociente != 0) {
+        resto = cociente % 10;
+        cociente /= 10;
+        ninvertido = (ninvertido * 10) + resto;
+      }
+
+      for (int i = 0; i < clave.length; i++) {
+        int digito = ninvertido % 10;
+        ninvertido = ninvertido / 10;
+        combination[i] = digito;
+        if (digito < clave[i]) {
+          System.out.println(digito + " Es menor");
+        } else if (digito > clave[i]) {
+          System.out.println(digito + " Es mayor");
+        } else System.out.println(digito + " Son iguales");
+      }
+    } while (!(Arrays.equals(combination, clave)));
   }
 }
