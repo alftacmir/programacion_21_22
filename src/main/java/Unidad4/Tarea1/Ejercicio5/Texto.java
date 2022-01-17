@@ -5,6 +5,7 @@ public class Texto {
     private StringBuilder cadena;
 
     private final int dimension;
+
     public Texto(int longitud){
         this.dimension=longitud;
         cadena= new StringBuilder();
@@ -42,6 +43,21 @@ public class Texto {
     }
     public void mostrar(){
     System.out.println(cadena);
+    }
+
+    public void contarvocales(){
+        int contador=0;
+    for (int i = 0; i < cadena.length(); i++) {
+        String vocales = "aeiouáéíóúAEIOUÁÉÍÓÚäëïöüÄËÏÖÜâêîôûÂÊÎÔÛ";
+        for(int j = 0; j < vocales.length(); j++) {
+          if (cadena.charAt(i)== vocales.charAt(j)){
+              contador++;
+              break;
+          }
+      }
+
+    }
+        System.out.println("Hay "+contador+" vocales");
     }
 
     public void setCadena(StringBuilder cadena) {

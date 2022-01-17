@@ -8,10 +8,11 @@ public class Main {
     prueba.addcaracter('a');
     prueba.addfinal("Jos");
     prueba.addcaracterfinal('r');
-    prueba.addcaracterfinal('r');
-    prueba.addcaracterfinal('r');
+    prueba.addcaracterfinal('i');
+    prueba.addcaracter('k');
 
     prueba.mostrar();
+    prueba.contarvocales();
 
 
 
