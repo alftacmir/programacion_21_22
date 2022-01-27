@@ -9,7 +9,7 @@ public class Hora {
     public Hora(){
         setHora(90);
         setMinutos(642);
-        setSegundos(232000);
+        setSegundos(231960);
     }
 
     public int getHora() {
@@ -28,7 +28,7 @@ public class Hora {
     }
 
     public void setMinutos(int minutos) {
-        while (minutos>60){
+        while (minutos>=60){
             minutos-=60;
             hora++;
             while (hora>=24){
@@ -43,16 +43,29 @@ public class Hora {
     }
 
     public void setSegundos(int segundos) {
-        while (segundos>60){
+        while (segundos>=60){
             segundos-=60;
             minutos++;
-        }while (minutos>60){
+        }while (minutos>=60){
             minutos-=60;
             hora++;
             while (hora>=24){
                 hora-=24;
             }
+    }
         this.segundos = segundos;
     }
+public void nsumar(int segundos){
+    while (segundos>=60){
+        segundos-=60;
+        minutos++;
+    }while (minutos>60){
+        minutos-=60;
+        hora++;
+        while (hora>=24){
+            hora-=24;
+        }
+    }
+    this.segundos +=segundos;
 }
 }

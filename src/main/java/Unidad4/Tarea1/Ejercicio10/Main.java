@@ -5,8 +5,15 @@ public class Main {
     //comprobación
 
     Hora h1=new Hora();
-    System.out.println(h1.getHora());
-    System.out.println(h1.getMinutos());
-    System.out.println(h1.getSegundos());
+    System.out.print("Son las : ");
+    System.out.print(h1.getHora()+":");
+    System.out.print(h1.getMinutos()+":");
+    System.out.print(h1.getSegundos());
+    System.out.println();
+    h1.nsumar(360);
+    System.out.print("La nueva hora es : ");
+    System.out.print(h1.getHora()+":");
+    System.out.print(h1.getMinutos()+":");
+    System.out.print(h1.getSegundos());
   }
 }
