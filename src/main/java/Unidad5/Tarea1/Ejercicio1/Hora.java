@@ -16,11 +16,12 @@ public class Hora {
         return hora;
     }
 
-    public void setHora(int hora) {
+    public int setHora(int hora) {
         while (hora>=24){
             hora-=24;
         }
         this.hora = hora;
+        return hora;
     }
 
     public int getMinutos() {
