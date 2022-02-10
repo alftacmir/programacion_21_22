@@ -1,4 +1,4 @@
-package Unidad5.Tarea1.Ejercicio7;
+package Unidad5.Tarea1.Ejercicio8;
 
 public class Caja {
     private final double ancho;
@@ -8,10 +8,10 @@ public class Caja {
         cm,
         m
     }
-    private final unidades unidad;
-    private final Etiqueta etiqueta;
+    private unidades unidad;
+    private Etiqueta etiqueta;
 
-    public Caja(double ancho, double alto, double profundidad, Etiqueta etiqueta,unidades unidad) {
+    public Caja(double ancho, double alto, double profundidad, Etiqueta etiqueta, unidades unidad) {
         this.ancho = ancho;
         this.alto = alto;
         this.profundidad = profundidad;
@@ -47,5 +47,9 @@ public class Caja {
 
     public Etiqueta getEtiqueta() {
         return etiqueta;
+    }
+
+    public void setUnidad(unidades unidad) {
+        this.unidad = unidad;
     }
 }
