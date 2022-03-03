@@ -17,6 +17,7 @@ public class Main{
               FileOutputStream doble=new FileOutputStream("src/main/java/Unidad6/Tarea2/Actividad1/dobles.dat");
               ObjectOutputStream out=new ObjectOutputStream(doble);
               out.writeDouble(d);
+              out.close();
           } catch (IOException e) {
         System.out.println(e.getMessage());
           }

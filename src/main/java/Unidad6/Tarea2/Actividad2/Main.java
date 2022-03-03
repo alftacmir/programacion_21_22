@@ -17,6 +17,7 @@ public class Main{
               FileOutputStream doble=new FileOutputStream("src/main/java/Unidad6/Tarea2/Actividad2/dobles.dat");
               ObjectOutputStream out=new ObjectOutputStream(doble);
               out.writeDouble(d);
+              out.close();
           } catch (IOException e) {
         System.out.println(e.getMessage());
           }
@@ -24,8 +25,9 @@ public class Main{
           try{
               FileInputStream archivo=new FileInputStream("src/main/java/Unidad6/Tarea2/Actividad2/dobles.dat");
               ObjectInputStream in=new ObjectInputStream(archivo);
-        double solucion=in.readDouble();
-      System.out.println("La lectura del fichero es "+solucion);
+              double sol=in.readDouble();
+              in.close();
+      System.out.println("La lectura del fichero es "+sol);
           }catch (IOException e){
         System.out.println("Fallo");
           }
