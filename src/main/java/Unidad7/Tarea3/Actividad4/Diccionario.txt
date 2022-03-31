@@ -1,0 +1,6 @@
+hola,hello
+adios,goodbye
+nombre,name
+coche,car
+casa,house
+mundo,world
