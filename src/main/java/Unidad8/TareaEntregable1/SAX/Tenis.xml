@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<torneo>
+    <partido id="1">
+        <jugadores>Nadal/Federer</jugadores>
+        <duracion>48</duracion>
+        <fecha>10/10/22</fecha>
+    </partido>
+    <partido id="2">
+        <jugadores>Djokovic/Alcaraz</jugadores>
+        <duracion>67</duracion>
+        <fecha>30/06/22</fecha>
+    </partido>
+    <partido id="3">
+        <jugadores>Isner/Medvedev</jugadores>
+        <duracion>30</duracion>
+        <fecha>28/02/22</fecha>
+    </partido>
+    <partido id="4">
+        <jugadores>Tsisipas/Murray</jugadores>
+        <duracion>55</duracion>
+        <fecha>11/12/22</fecha>
+    </partido>
+    <partido id="5">
+        <jugadores>Agassi/Thiem</jugadores>
+        <duracion>82</duracion>
+        <fecha>06/08/22</fecha>
+    </partido>
+</torneo>
