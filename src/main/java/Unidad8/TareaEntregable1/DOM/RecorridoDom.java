@@ -58,7 +58,7 @@ public class RecorridoDom {
 
         if (nl.item(i).hasAttributes()){
           for (int j = 0; j < nl.item(i).getAttributes().getLength(); j++) {
-            System.out.print(" "+nl.item(i).);
+            System.out.print(" "+nl.item(i));
           }
         }
       }

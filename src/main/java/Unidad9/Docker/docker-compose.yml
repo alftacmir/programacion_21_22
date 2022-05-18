@@ -1,0 +1,27 @@
+version: "3.1"
+services:
+  mysql:
+    image: mysql:latest
+    container_name: p_mysql
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./db_files:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=programacion
+      - MYSQL_DATABASE=classicmodels
+      - MYSQL_USER=programacion
+      - MYSQL_PASSWORD=programacion
+    ports:
+      - "8093:3306"
+
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: p_phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+    depends_on:
+      - mysql
