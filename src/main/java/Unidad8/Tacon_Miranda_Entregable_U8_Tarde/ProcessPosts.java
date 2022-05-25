@@ -13,6 +13,12 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +66,36 @@ public class ProcessPosts {
        hijo.appendChild(description);
        hijo.appendChild(pubDate);
        hijo.appendChild(guid);
+
+
+        try {
+        TransformerFactory tf = TransformerFactory.newInstance();
+        Transformer transformer = tf.newTransformer();
+
+        // Configuración del transformer
+        // Podéis ver toda la lista de propiedes aquí
+        // https://docs.oracle.com/javase/7/docs/api/javax/xml/transform/OutputKeys.html
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+        transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+        transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+        transformer.setOutputProperty("http://www.oracle.com/xml/is-standalone", "yes");
+
+        // Creación del origen DOMSource
+        DOMSource origenDOM = new DOMSource(root);
+
+        // Creación del fichero que va a ser mi destino
+        File nuevoPersonas =
+                new File("RUTA DE REPOSITORY ROOT");
+        StreamResult destino = new StreamResult(nuevoPersonas);
+
+        // Hacemos la transformación que en nuestro caso es la escritura
+
+            transformer.transform(origenDOM, destino);
+        } catch (TransformerException e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 
