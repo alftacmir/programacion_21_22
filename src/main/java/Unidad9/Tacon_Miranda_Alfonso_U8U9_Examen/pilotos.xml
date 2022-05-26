@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pilotos>
+    <piloto>
+        <nombre>Fernando Alonso</nombre>
+        <edad>41</edad>
+        <escuderia>Alpine</escuderia>
+        <campeonatos>2</campeonatos>
+    </piloto>
+    <piloto>
+        <nombre>Max Verstappen</nombre>
+        <edad>25</edad>
+        <escuderia>Red Bull</escuderia>
+        <campeonatos>0</campeonatos>
+    </piloto>
+    <piloto>
+        <nombre>Lewis Hamilton</nombre>
+        <edad>37</edad>
+        <escuderia>Mercedes</escuderia>
+        <campeonatos>7</campeonatos>
+    </piloto>
+    <piloto>
+        <nombre>Charles Leclerc</nombre>
+        <edad>25</edad>
+        <escuderia>Ferrari</escuderia>
+        <campeonatos>0</campeonatos>
+    </piloto>
+    <piloto>
+        <nombre>Carlos Sainz</nombre>
+        <edad>28</edad>
+        <escuderia>Ferrari</escuderia>
+        <campeonatos>0</campeonatos>
+    </piloto>
+</pilotos>
